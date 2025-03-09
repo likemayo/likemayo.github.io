@@ -1060,4 +1060,16 @@ body {
         width: 16px;
         height: 16px;
     }
+}
+
+/* 汉堡菜单激活时的导航菜单样式 */
+.nav-menu.active {
+    display: flex;
+}
+
+/* 确保在移动端时导航菜单默认隐藏 */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
 } 

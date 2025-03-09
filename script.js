@@ -22,6 +22,25 @@ function switchLanguage(lang) {
 // 页面加载时初始化语言
 document.addEventListener('DOMContentLoaded', () => {
     switchLanguage(currentLang);
+
+    // 添加汉堡菜单的点击事件处理
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        // 切换汉堡菜单的激活状态
+        hamburger.classList.toggle('active');
+        // 切换导航菜单的显示状态
+        navMenu.classList.toggle('active');
+    });
+
+    // 点击导航链接时关闭菜单
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
 });
 
 // 添加平滑滚动处理
