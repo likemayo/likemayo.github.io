@@ -551,231 +551,135 @@ body {
     }
 }
 
-/* 科研经历部分样式 */
-.research-section {
-    padding: 5rem 0;
-    background-color: #faf6f1;
-}
-
-.research-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #2c3e50;
-}
-
-.research-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.research-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.research-header {
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 1.5rem;
-}
-
-.research-header h3 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.research-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    color: #666;
-}
-
-.research-role {
-    font-weight: 600;
-    color: #3498db;
-}
-
-.research-time, .research-location {
-    color: #666;
-}
-
-.research-details {
-    padding-top: 1rem;
-}
-
-.research-achievement h4 {
-    color: #2c3e50;
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-}
-
-.research-achievement ul {
-    list-style: none;
-}
-
-.research-achievement li {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-    position: relative;
-    line-height: 1.6;
-}
-
-.research-achievement li::before {
-    content: "•";
-    color: #3498db;
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .research-card {
-        padding: 1.5rem;
-    }
-
-    .research-header h3 {
-        font-size: 1.5rem;
-    }
-
-    .research-meta {
-        gap: 1rem;
-    }
-}
-
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 0.5rem;
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.project-link:hover {
-    color: #2980b9;
-}
-
-.project-link i {
-    font-size: 1.1rem;
-}
-
-/* 比赛经历部分样式 */
-.competitions-section {
+/* 科研与比赛经历部分样式 */
+.research-competitions-section {
     padding: 5rem 0;
     background-color: #f0f7fc;
 }
 
-.competitions-section h2 {
+.research-competitions-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: #2c3e50;
 }
 
-.competitions-content {
+.research-competitions-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
-.competition-card {
+.research-competitions-card {
     background: white;
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-.competition-header {
-    margin-bottom: 2rem;
+.research-competitions-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 卡片标题部分 */
+.research-header, .competition-header {
+    margin-bottom: 2.5rem;
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 1.5rem;
 }
 
-.competition-header h3 {
+.research-header h3, .competition-header h3 {
     font-size: 1.8rem;
     color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+/* 元信息部分 */
+.research-meta, .competition-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: #666;
     margin-bottom: 1rem;
 }
 
-.competition-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    color: #666;
-}
-
-.competition-platform {
+.research-role, .competition-platform {
     font-weight: 600;
     color: #3498db;
+    font-size: 1.1rem;
 }
 
-.competition-role, .competition-time {
-    color: #666;
+/* 成就列表部分 */
+.research-achievement, .competition-achievements {
+    padding-top: 0;
 }
 
+.research-achievement h4, .competition-achievements h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.research-achievement ul, .competition-achievements ul {
+    list-style: none;
+}
+
+.research-achievement li, .competition-achievements li {
+    margin-bottom: 1.5rem;
+    padding-left: 1.8rem;
+    position: relative;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.research-achievement li::before, .competition-achievements li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-size: 1.4rem;
+    top: -0.1rem;
+}
+
+/* 高亮部分样式 */
 .achievement-highlight {
     background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin: 1.5rem 0;
+    padding: 1.8rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border-left: 4px solid #3498db;
 }
 
 .highlight-text {
     color: #2c3e50;
     font-weight: 500;
     font-size: 1.1rem;
-}
-
-.competition-achievements h4 {
-    color: #2c3e50;
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-}
-
-.competition-achievements ul {
-    list-style: none;
-}
-
-.competition-achievements li {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-    position: relative;
-    line-height: 1.6;
-}
-
-.competition-achievements li::before {
-    content: "•";
-    color: #3498db;
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-    .competition-card {
-        padding: 1.5rem;
+    .research-competitions-card {
+        padding: 1.8rem;
     }
 
-    .competition-header h3 {
+    .research-header h3, .competition-header h3 {
         font-size: 1.5rem;
     }
 
-    .competition-meta {
-        gap: 1rem;
+    .research-meta, .competition-meta {
+        gap: 1.5rem;
     }
 
     .achievement-highlight {
-        padding: 1rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
     }
 }
 
@@ -1071,5 +975,688 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
+    }
+}
+
+/* 重新设计作品展示样式 */
+.design-works {
+    padding: 8rem 0 5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.design-works h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: #2c3e50;
+}
+
+.design-project {
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* SignTok 项目背景 */
+.design-project:nth-child(1) {
+    background-color: #f0f7fc;  /* 浅蓝色背景 */
+}
+
+/* NomNom 项目背景 */
+.design-project:nth-child(2) {
+    background-color: #f8f4f9;  /* 浅紫色背景 */
+}
+
+/* 调整海报网格的背景，使其与 NomNom 的背景形成层次 */
+.posters-grid {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    background: linear-gradient(to bottom, #ffffff, #f8f4f9);
+    border-radius: 24px;
+}
+
+/* 优化项目之间的过渡 */
+.design-project + .design-project {
+    margin-top: 0;  /* 移除之前的间距 */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);  /* 添加微妙的分隔线 */
+}
+
+/* 调整内容区域的最大宽度，确保在不同背景下居中 */
+.project-header,
+.project-description,
+.design-screens {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+.project-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.project-header h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.project-tools {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.project-description {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.design-showcase {
+    margin: 3rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.figma-embed {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+.project-features {
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.project-features h4 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.project-features ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-features li {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.project-features li:hover {
+    transform: translateY(-2px);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .design-project {
+        padding: 0 1rem;
+    }
+
+    .project-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-description {
+        font-size: 1.1rem;
+    }
+
+    .figma-embed {
+        height: 400px;
+    }
+
+    .project-features ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 设计界面展示样式 */
+.design-screens {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.screen-item {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.screen-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 12px;
+}
+
+.screen-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(52, 152, 219, 0.05));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.screen-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+}
+
+.screen-image:hover::before {
+    opacity: 1;
+}
+
+.screen-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.screen-image:hover img {
+    transform: scale(1.02);
+}
+
+.screen-description {
+    padding: 1rem;
+}
+
+.screen-description h4 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.screen-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .screen-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .screen-description {
+        padding: 0;
+    }
+
+    .screen-description h4 {
+        font-size: 1.3rem;
+    }
+
+    .screen-description p {
+        font-size: 1rem;
+    }
+}
+
+.phone-frame {
+    position: relative;
+    padding: 16px;
+    background: #1e1e1e !important;
+    border-radius: 40px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    max-width: 280px !important;
+    margin: 0 auto;
+    background-image: none !important;
+}
+
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 25px;
+    background: #1e1e1e;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    z-index: 2;
+}
+
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 90px;
+    width: 3px;
+    height: 60px;
+    background: #2d2d2d;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.phone-frame img {
+    border-radius: 32px !important;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.figma-prototype {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;  /* 16:9 宽高比 */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.figma-prototype iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* 调整布局比例 */
+.screen-item {
+    grid-template-columns: 3fr 2fr;  /* 调整原型和描述的比例 */
+    max-width: 1200px;  /* 增加最大宽度 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .figma-prototype {
+        padding-bottom: 100%;  /* 在移动端调整为正方形 */
+    }
+    
+    .screen-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 优化项目描述样式 */
+.project-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 海报展示样式 */
+.poster-layout {
+    grid-template-columns: 2fr 1fr;  /* 调整海报和描述的比例 */
+    gap: 4rem;
+    align-items: flex-start;  /* 改变对齐方式 */
+}
+
+.poster-image {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.poster-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.poster-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .poster-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .poster-image {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 全宽海报样式 */
+.poster-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.full-width-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.full-width-poster:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .poster-container {
+        padding: 0 1rem;
+    }
+    
+    .full-width-poster {
+        border-radius: 12px;
+    }
+}
+
+/* 海报网格布局 */
+.posters-grid {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    background: linear-gradient(to bottom, #ffffff, #f8f4f9);
+    border-radius: 24px;
+}
+
+.poster-container {
+    width: 100%;
+    padding: 2.5rem;  /* 增加内边距 */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease;  /* 添加容器过渡效果 */
+}
+
+.poster-container:hover {
+    transform: translateY(-5px);  /* 添加容器悬停效果 */
+}
+
+.full-width-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+}
+
+.full-width-poster:hover {
+    transform: scale(1.02);  /* 调整悬停效果 */
+}
+
+/* 设计作品区域背景 */
+.design-project {
+    padding: 3rem 0;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;  /* 添加浅灰色背景 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .posters-grid {
+        gap: 2rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .poster-container {
+        padding: 1rem;
+    }
+    
+    .full-width-poster {
+        border-radius: 12px;
+    }
+}
+
+/* 原型展示部分样式 */
+.prototype-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.prototype-section h4 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.figma-prototype {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;  /* 16:9 宽高比 */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.figma-prototype iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .prototype-section {
+        margin-top: 4rem;
+    }
+    
+    .prototype-section h4 {
+        font-size: 1.5rem;
+    }
+    
+    .figma-prototype {
+        border-radius: 12px;
+    }
+}
+
+/* 原型展示部分样式优化 */
+.prototype-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.prototype-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.prototype-description {
+    text-align: left;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.prototype-description h4 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.feature-flows {
+    display: grid;
+    gap: 2rem;
+}
+
+.flow-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #3498db;
+}
+
+.flow-item h5 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.flow-item p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .prototype-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .prototype-description {
+        padding: 1.5rem;
+    }
+    
+    .flow-item {
+        padding: 1.2rem;
+    }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .project-header,
+    .project-description,
+    .design-screens,
+    .prototype-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .posters-grid {
+        padding: 2rem 1rem;
+    }
+}
+
+/* 垂直布局的原型展示样式 */
+.prototype-content-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.figma-prototype-full {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;  /* 增加高度比例 */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.figma-prototype-full iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.prototype-description-full {
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 1000px;  /* 限制说明文字的宽度 */
+    margin: 0 auto;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .prototype-content-vertical {
+        gap: 2rem;
+    }
+    
+    .figma-prototype-full {
+        padding-bottom: 150%;  /* 移动端下增加高度 */
+    }
+    
+    .prototype-description-full {
+        padding: 1.5rem;
     }
 } 

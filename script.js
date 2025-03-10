@@ -64,4 +64,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-}); 
+});
+
+// 添加预览切换功能
+function togglePreview(event) {
+    event.preventDefault();
+    const card = event.target.closest('.design-card');
+    const preview = card.querySelector('.design-preview');
+    preview.classList.toggle('active');
+    
+    const button = event.target.closest('.view-details');
+    const isActive = preview.classList.contains('active');
+    
+    // 更新按钮文字
+    const zhText = button.querySelector('[data-lang="zh"]');
+    const enText = button.querySelector('[data-lang="en"]');
+    
+    if (isActive) {
+        zhText.textContent = '收起详情';
+        enText.textContent = 'Hide Details';
+    } else {
+        zhText.textContent = '查看详情';
+        enText.textContent = 'View Details';
+    }
+} 
