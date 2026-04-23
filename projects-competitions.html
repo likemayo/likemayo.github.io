@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Competitions | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <span data-lang="zh">伍彦霖</span>
+                <span data-lang="en">Yanlin Wu</span>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="index.html">
+                        <span data-lang="zh">首页</span>
+                        <span data-lang="en">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html">
+                        <span data-lang="zh">学业</span>
+                        <span data-lang="en">Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects-competitions.html" class="active">
+                        <span data-lang="zh">科研与比赛</span>
+                        <span data-lang="en">Projects &amp; Competitions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="internships.html">
+                        <span data-lang="zh">实习</span>
+                        <span data-lang="en">Internships</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="figma-works.html">
+                        <span data-lang="zh">设计作品</span>
+                        <span data-lang="en">Design Works</span>
+                    </a>
+                </li>
+                <li class="language-switch">
+                    <button onclick="switchLanguage('zh')">中文</button>
+                    <button onclick="switchLanguage('en')">EN</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="research-competitions-section" style="padding-top: 8rem;">
+        <h2>
+            <span data-lang="zh">科研与比赛经历</span>
+            <span data-lang="en">Projects &amp; Competitions</span>
+        </h2>
+        <div class="research-competitions-content">
+            <div class="research-competitions-card">
+                <div class="research-header">
+                    <h3>
+                        <span data-lang="zh">具身人工智能与机器人实验室</span>
+                        <span data-lang="en">Embodied AI &amp; Robotics Lab</span>
+                    </h3>
+                    <div class="research-meta">
+                        <p class="research-role">
+                            <span data-lang="zh">研究助理</span>
+                            <span data-lang="en">Research Assistant</span>
+                        </p>
+                        <p class="research-time">
+                            <span data-lang="zh">2024年5月 - 至今</span>
+                            <span data-lang="en">May 2024 - Present</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="research-details">
+                    <ul>
+                        <li>
+                            <span data-lang="zh">收集并处理13种语言手语数据集，用于双向手语翻译</span>
+                            <span data-lang="en">Collected and processed sign language datasets in 13 languages for bidirectional translation</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">使用YouTube API与Python自动化工具采集约2000条手语视频</span>
+                            <span data-lang="en">Collected about 2000 sign-language videos using YouTube API and Python automation tools</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="research-competitions-card">
+                <div class="competition-header">
+                    <h3>
+                        <span data-lang="zh">Jane Street 实时市场预测</span>
+                        <span data-lang="en">Jane Street Market Data Prediction</span>
+                    </h3>
+                    <div class="competition-meta">
+                        <p class="competition-platform">
+                            <span data-lang="zh">Kaggle（全球）</span>
+                            <span data-lang="en">Kaggle (Global)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="competition-details">
+                    <p class="highlight-text">
+                        <span data-lang="zh">在3713支队伍中排名前4%，获银牌</span>
+                        <span data-lang="en">Ranked top 4% among 3,713 teams and earned a Silver Medal</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js?v=20260423"></script>
+</body>
+</html>
