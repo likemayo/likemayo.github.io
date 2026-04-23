@@ -60,10 +60,10 @@
         </nav>
     </header>
 
-    <section class="research-competitions-section" style="padding-top: 8rem;">
+    <section id="research-competitions" class="research-competitions-section" style="padding-top: 8rem;">
         <h2>
             <span data-lang="zh">科研与比赛经历</span>
-            <span data-lang="en">Projects &amp; Competitions</span>
+            <span data-lang="en">Research &amp; Competition Experience</span>
         </h2>
         <div class="research-competitions-content">
             <div class="research-competitions-card">
@@ -81,26 +81,36 @@
                             <span data-lang="zh">2024年5月 - 至今</span>
                             <span data-lang="en">May 2024 - Present</span>
                         </p>
+                        <p class="research-location">
+                            <span data-lang="zh">纽约大学阿布扎比分校</span>
+                            <span data-lang="en">NYU Abu Dhabi</span>
+                        </p>
                     </div>
                 </div>
                 <div class="research-details">
-                    <ul>
-                        <li>
-                            <span data-lang="zh">收集并处理13种语言手语数据集，用于双向手语翻译</span>
-                            <span data-lang="en">Collected and processed sign language datasets in 13 languages for bidirectional translation</span>
-                        </li>
-                        <li>
-                            <span data-lang="zh">使用YouTube API与Python自动化工具采集约2000条手语视频</span>
-                            <span data-lang="en">Collected about 2000 sign-language videos using YouTube API and Python automation tools</span>
-                        </li>
-                    </ul>
+                    <div class="research-achievement">
+                        <h4>
+                            <span data-lang="zh">研究内容</span>
+                            <span data-lang="en">Research Focus</span>
+                        </h4>
+                        <ul>
+                            <li>
+                                <span data-lang="zh">收集并处理了13种手语数据集，用于双向手语翻译</span>
+                                <span data-lang="en">Collected and processed sign language datasets in 13 languages for bidirectional sign language translation</span>
+                            </li>
+                            <li>
+                                <span data-lang="zh">使用YouTube API和基于Python的自动化工具，从YouTube上收集了约2000个手语视频。这个<a href="https://github.com/likemayo/youtube_scraping" target="_blank" class="project-link">GitHub仓库 <i class="fab fa-github"></i></a> 展示了一个下载ASL（美国手语）视频的实例代码。</span>
+                                <span data-lang="en">Collected approximately 2000 sign language videos from YouTube using YouTube API and Python-based automation tools. This <a href="https://github.com/likemayo/youtube_scraping" target="_blank" class="project-link">GitHub repository <i class="fab fa-github"></i></a> demonstrates example code for downloading ASL (American Sign Language) videos.</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="research-competitions-card">
                 <div class="competition-header">
                     <h3>
-                        <span data-lang="zh">Jane Street 实时市场预测</span>
+                        <span data-lang="zh">Jane Street 实时市场数据预测</span>
                         <span data-lang="en">Jane Street Market Data Prediction</span>
                     </h3>
                     <div class="competition-meta">
@@ -108,13 +118,43 @@
                             <span data-lang="zh">Kaggle（全球）</span>
                             <span data-lang="en">Kaggle (Global)</span>
                         </p>
+                        <p class="competition-role">
+                            <span data-lang="zh">团队成员，分析师</span>
+                            <span data-lang="en">Team Member, Analyst</span>
+                        </p>
+                        <p class="competition-time">
+                            <span data-lang="zh">2024年10月 - 2024年1月7日</span>
+                            <span data-lang="en">October 2024 - January 7, 2024</span>
+                        </p>
                     </div>
                 </div>
                 <div class="competition-details">
-                    <p class="highlight-text">
-                        <span data-lang="zh">在3713支队伍中排名前4%，获银牌</span>
-                        <span data-lang="en">Ranked top 4% among 3,713 teams and earned a Silver Medal</span>
-                    </p>
+                    <div class="achievement-highlight">
+                        <p class="highlight-text">
+                            <span data-lang="zh">在全球3713支队伍中排名前4%（第143名），获得银牌</span>
+                            <span data-lang="en">Ranked top 4% (143rd) among 3,713 global teams, earned Silver Medal</span>
+                        </p>
+                    </div>
+                    <div class="competition-achievements">
+                        <h4>
+                            <span data-lang="zh">主要成果</span>
+                            <span data-lang="en">Key Achievements</span>
+                        </h4>
+                        <ul>
+                            <li>
+                                <span data-lang="zh">分析了包含47,127,338行样本的大规模数据集，涵盖1,699个交易日（超过四年半）的市场数据。数据集包含79个特征，代表不同金融指标。这个<a href="https://github.com/likemayo/Kaggle-JaneStreetCommpetition" target="_blank" class="project-link">GitHub仓库 <i class="fab fa-github"></i></a> 包含了完整的代码实现，包括特征工程、模型训练和优化过程。</span>
+                                <span data-lang="en">Analyzed a large-scale dataset containing 47,127,338 samples across 1,699 trading days (over 4.5 years). The dataset includes 79 features representing various financial indicators. This <a href="https://github.com/likemayo/Kaggle-JaneStreetCommpetition" target="_blank" class="project-link">GitHub repository <i class="fab fa-github"></i></a> contains the complete code implementation, including feature engineering, model training, and optimization process.</span>
+                            </li>
+                            <li>
+                                <span data-lang="zh">应用K折交叉验证并优化LGBM模型，将预测准确率提高了10%</span>
+                                <span data-lang="en">Applied K-fold cross-validation and optimized LGBM model, improving prediction accuracy by 10%</span>
+                            </li>
+                            <li>
+                                <span data-lang="zh">通过超参数调优和稳健验证，将预测得分从0.0096提升至0.0083</span>
+                                <span data-lang="en">Enhanced prediction score from 0.0096 to 0.0083 through hyperparameter tuning and robust validation</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
