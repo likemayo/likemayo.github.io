@@ -1,5 +1,5 @@
 // 设置默认语言
-let currentLang = 'zh';
+let currentLang = 'en';
 
 // 语言切换函数
 function switchLanguage(lang) {
